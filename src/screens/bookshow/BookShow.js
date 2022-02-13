@@ -11,7 +11,6 @@ import Select from "@material-ui/core/Select";
 import MenuItem from "@material-ui/core/MenuItem";
 import Button from "@material-ui/core/Button";
 import FormHelperText from "@material-ui/core/FormHelperText";
-import { Link } from "react-router-dom";
 
 const BookShow = (props) => {
   const [location, setLocation] = useState("");
@@ -36,11 +35,12 @@ const BookShow = (props) => {
   useEffect(() => {
     let dataShows = null;
 
+    console.log("props");
+    console.log(props);
+
     fetch(props.baseUrl + "movies/" + props.match.params.id + "/shows", {
       method: "GET",
       headers: {
-        "Content-Type": "application/json",
-        "Cache-Control": "no-cache",
       },
       body: dataShows,
     })
@@ -195,11 +195,6 @@ const BookShow = (props) => {
     <div>
       <Header baseUrl={props.baseUrl} />
       <div className="bookShow">
-        <Typography className="back">
-          <Link to={"/movie/" + props.match.params.id}>
-            &#60; Back to Movie Details
-          </Link>
-        </Typography>
 
         <Card className="cardStyle">
           <CardContent>

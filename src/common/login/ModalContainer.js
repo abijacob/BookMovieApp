@@ -6,7 +6,6 @@ import Login from "./Login";
 import Register from "./Register";
 import {Tab} from "@material-ui/core";
 
-
 function TabPanel(props) {
     const { children, value, index, ...other } = props;
 
@@ -96,6 +95,7 @@ const ModalContainer = (props) => {
 
     return (
         <div>
+
             <Modal
                 open={props.addModal}
                 onClose={props.handleClose}
