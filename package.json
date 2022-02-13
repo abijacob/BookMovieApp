@@ -19,5 +19,8 @@
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   },
-  "proxy": "http://localhost:8085"
+  "proxy": "http://localhost:8085",
+  "devDependencies": {
+    "prop-types": "^15.8.1"
+  }
 }
