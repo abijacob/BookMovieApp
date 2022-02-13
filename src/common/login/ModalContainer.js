@@ -49,23 +49,19 @@ function getModalStyle() {
         top: `${top}%`,
         left: `${left}%`,
         transform: `translate(-${top}%, -${left}%)`,
-        'margin-top': "20%",
-        'margin-left': '42%',
-        'background-color': 'white',
-        height: '150px',
-        width: '220px'
+        'marginTop': "20%",
+        'marginLeft': '42%',
+        'backgroundColor': 'white',
+        height: '300px',
+        width: '350px'
     };
 }
 
 const ModalContainer = (props) => {
+    console.log(props);
     const [modalStyle] = React.useState(getModalStyle);
     const [value, setValue] = React.useState(0);
-    const [open, setOpen] = React.useState(false);
     const [isLogin, setIslogin] = React.useState(false);
-
-    const handleClose = () => {
-        setOpen(false);
-    };
 
     const handleChange = (event, newValue) => {
         setValue(newValue);
@@ -101,8 +97,8 @@ const ModalContainer = (props) => {
     return (
         <div>
             <Modal
-                open={open}
-                onClose={handleClose}
+                open={props.addModal}
+                onClose={props.handleClose}
                 aria-labelledby="simple-modal-title"
                 aria-describedby="simple-modal-description"
             >
