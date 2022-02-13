@@ -1,0 +1,21 @@
+.header{
+    background: #222;
+    padding: 8px 32px 8px 16px;
+    height: 36px;
+}
+.logo{
+    width: 35px;
+    height: 35px;
+    text-indent: -9999px;
+    background: #ff7f7f;
+    animation: App-logo-spin 8s infinite linear;
+}
+.logo img{
+    display: block;
+    width: auto;
+    height: 100%;
+}
+
+.login-button-class{
+    margin-left: 1000px !important;
+}
