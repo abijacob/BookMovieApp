@@ -1,6 +1,8 @@
 import React from "react";
-import Home from "../common/header/Header";
 import BookShow from "./bookshow/BookShow";
+import Home from "./home/Home"
+import Details from './details/Details'
+import Confirmation from './confirmation/Confirmation'
 import { BrowserRouter as Router, Route } from "react-router-dom";
 
 const Controller = () => {
@@ -9,16 +11,23 @@ const Controller = () => {
   return (
     <Router>
       <div className="main-container">
-        <Route
-          exact
-          path="/"
-          render={(props) => <Home {...props} baseUrl={baseUrl} />}
-        />
           <Route
               path="/bookshow/:id"
               render={(props) => <BookShow {...props} baseUrl={baseUrl} />}
           />
-
+          <Route
+              exact
+              path="/"
+              render={(props) => <Home {...props} baseUrl={baseUrl} />}
+          />
+          <Route
+              path="/movie/:id"
+              render={(props) => <Details {...props} baseUrl={baseUrl} />}
+          />
+          <Route
+              path="/confirm/:id"
+              render={(props) => <Confirmation {...props} baseUrl={baseUrl} />}
+          />
       </div>
     </Router>
   );

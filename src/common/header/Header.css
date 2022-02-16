@@ -8,14 +8,18 @@
     height: 35px;
     text-indent: -9999px;
     background: #ff7f7f;
-    animation: App-logo-spin 8s infinite linear;
+    animation: App-logo-spin infinite 8s linear;
 }
-.logo img{
+.logo_img{
     display: block;
     width: auto;
     height: 100%;
 }
 
 .login-button-class{
-    margin-left: 1000px !important;
+
+}
+
+.login-button-div{
+    margin-left: 1000px;
 }

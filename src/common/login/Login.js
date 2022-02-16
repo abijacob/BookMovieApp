@@ -14,7 +14,7 @@ function Login(props) {
 
 
     return (
-        <ValidatorForm className="login-form" onSubmit={onFormSubmitted}>
+        <ValidatorForm className="loginForm" onSubmit={onFormSubmitted}>
             <br />
             <TextValidator
                 id="username"

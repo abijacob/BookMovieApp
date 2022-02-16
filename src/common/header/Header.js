@@ -11,25 +11,30 @@ export default function Header(props){
     const handleClose = () => {
         setOpenLoginModal(!openLoginModal);
     };
-
+    console.log("props")
+    console.log(props)
     return(
         <div className="header">
             <div className="logo">
                 <img src={Logo}  alt="logo"/>
             </div>
-            <Button className="login-button-class"
-                    onClick={()=>{
-                        setOpenLoginModal(!openLoginModal)
-                    }}
-                    type="submit" variant="contained" color="primary">
-                login
-            </Button>
-
+            <div className="login-button-div">
+                <div>
+                    <Link to={"/bookshow/"+props.bookShow}>
+                        <Button variant="contained" color="primary">
+                            Book Show
+                        </Button>
+                    </Link>
+                    <Button className="login-button-class"
+                            onClick={()=>{
+                                setOpenLoginModal(!openLoginModal)
+                            }}
+                            type="submit" variant="contained" color="primary">
+                        login
+                    </Button>
+                </div>
+            </div>
             <ModalContainer handleClose={handleClose} addModal={openLoginModal} {...props}/>
-            <Link to={"/bookshow/"+"7d174a25-ba31-45a8-85b4-b06ffc9d5f8f"}>
-                <Button variant="contained" color="primary">
-                    Book Show
-                </Button>
-            </Link>
+
         </div>);
 }

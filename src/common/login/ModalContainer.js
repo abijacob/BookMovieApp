@@ -48,10 +48,10 @@ function getModalStyle() {
         top: `${top}%`,
         left: `${left}%`,
         transform: `translate(-${top}%, -${left}%)`,
-        'marginTop': "20%",
-        'marginLeft': '42%',
+        'marginTop': "5%",
+        'marginLeft': '35%',
         'backgroundColor': 'white',
-        height: '300px',
+        height: '500px',
         width: '350px'
     };
 }
@@ -80,7 +80,7 @@ const ModalContainer = (props) => {
                 aria-label="simple tabs example"
             >
                 <Tab label="Login" {...a11yProps(0)} />
-                <Tab label="Register" {...a11yProps(1)} />
+                <Tab label="Register"  {...a11yProps(1)} />
             </Tabs>
 
             <TabPanel value={value} index={0}>

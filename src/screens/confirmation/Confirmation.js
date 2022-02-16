@@ -79,7 +79,6 @@ const Confirmation = (props) => {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
-        "Cache-Control": "no-cache",
         Authorization: "Bearer " + sessionStorage.getItem("access-token"),
       },
     })
